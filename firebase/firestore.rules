@@ -1,0 +1,27 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // All user data lives under users/{uid}; users can only touch their own.
+    match /users/{uid}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Community edit suggestions: create-only; reviewed by moderators via Cloud Functions/admin.
+    match /edits/{editId} {
+      allow create: if request.auth != null
+        && request.resource.data.user_id == request.auth.uid
+        && request.resource.data.status == 'pending';
+      allow read, update, delete: if false;
+    }
+
+    // Approved patches folded into the next bundle build: admin/Functions only.
+    match /guide_patches/{patchId} {
+      allow read, write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

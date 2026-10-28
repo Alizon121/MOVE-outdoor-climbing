@@ -1,0 +1,5 @@
+{
+  "tabs": { "explore": "Explore", "map": "Map", "logbook": "Logbook", "profile": "Profile" },
+  "placeholder": { "comingSoon": "Coming soon" },
+  "app": { "name": "MOVE", "tagline": "Outdoor climbing, free and offline." }
+}

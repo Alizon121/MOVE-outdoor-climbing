@@ -1,0 +1,5 @@
+{
+  "tabs": { "explore": "Explorar", "map": "Mapa", "logbook": "Bitácora", "profile": "Perfil" },
+  "placeholder": { "comingSoon": "Próximamente" },
+  "app": { "name": "MOVE", "tagline": "Escalada al aire libre, gratis y sin conexión." }
+}

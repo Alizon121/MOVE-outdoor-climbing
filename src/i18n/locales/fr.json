@@ -1,0 +1,5 @@
+{
+  "tabs": { "explore": "Explorer", "map": "Carte", "logbook": "Carnet", "profile": "Profil" },
+  "placeholder": { "comingSoon": "Bientôt disponible" },
+  "app": { "name": "MOVE", "tagline": "Escalade en plein air, gratuite et hors ligne." }
+}
